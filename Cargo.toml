@@ -21,4 +21,4 @@ pkg-config = "0.3"
 default = ["bindgen/runtime"]
 # Workaround for bindgen bug when ImageMagick is compiled with disable-hdri
 disable-hdri = []
-static = ["bindgen/dynamic"]
+static = ["bindgen/static"]
