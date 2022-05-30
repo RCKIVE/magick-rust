@@ -14,9 +14,11 @@ build = "build.rs"
 libc = "0.2"
 
 [build-dependencies]
-bindgen = "0.59"
+bindgen = {version = "0.59", default-features = false, features = ["logging", "clap", "which-rustfmt"]}
 pkg-config = "0.3"
 
 [features]
+default = ["bindgen/runtime"]
 # Workaround for bindgen bug when ImageMagick is compiled with disable-hdri
 disable-hdri = []
+static = ["bindgen/dynamic"]
